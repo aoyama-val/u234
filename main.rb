@@ -3,15 +3,15 @@
 # (c)2010, AOYAMA Shotaro
 #
 require 'sdl'
-require 'lib/fpstimer.rb'
-require 'lib/input.rb'
-require 'score.rb'
-require 'player.rb'
-require 'bullet.rb'
-require 'background.rb'
-require 'target.rb'
-require 'numberfont.rb'
-require 'config.rb'
+require_relative 'lib/fpstimer.rb'
+require_relative 'lib/input.rb'
+require_relative 'score.rb'
+require_relative 'player.rb'
+require_relative 'bullet.rb'
+require_relative 'background.rb'
+require_relative 'target.rb'
+require_relative 'numberfont.rb'
+require_relative 'config.rb'
 
 def clamp(min, value, max)
   if value < min 
@@ -80,7 +80,7 @@ class Game
     # オブジェクトの生成
     $score = Score.new
 
-    @title = SDL::Surface.load("image/title.bmp")
+    @title = SDL::Surface.loadBMP("image/title.bmp")
 
     @input = Input.new
     @font = SDL::TTF.open("image/boxfont2.ttf",20)

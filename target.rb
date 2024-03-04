@@ -5,7 +5,7 @@ class Targets
   attr_accessor :targets
 
   def initialize()
-    @image = SDL::Surface.load("image/target.bmp")
+    @image = SDL::Surface.loadBMP("image/target.bmp")
 
     reset()
   end

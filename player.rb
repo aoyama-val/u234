@@ -5,8 +5,8 @@ class Player
 
   def initialize(x,y)
     @x, @y = x, y
-    @image = SDL::Surface.load("image/player.bmp")
-    @image_dead = SDL::Surface.load("image/dust.bmp")
+    @image = SDL::Surface.loadBMP("image/player.bmp")
+    @image_dead = SDL::Surface.loadBMP("image/dust.bmp")
 
     reset()
   end

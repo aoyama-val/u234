@@ -1,7 +1,7 @@
 class Background
   def initialize
-    @image_wall = SDL::Surface.load("image/wall.bmp")
-    @image_back = SDL::Surface.load("image/back.bmp")
+    @image_wall = SDL::Surface.loadBMP("image/wall.bmp")
+    @image_back = SDL::Surface.loadBMP("image/back.bmp")
   end
 
   def render(screen)

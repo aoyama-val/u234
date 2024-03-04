@@ -1,6 +1,6 @@
 class NumberFont
   def initialize
-    image = SDL::Surface.load("image/numbers.png")
+    image = SDL::Surface.loadBMP("image/numbers.bmp")
     @images = []
     for i in 0..9
       @images.push(image.copy_rect(8*i, 0, 8, 16).display_format)
